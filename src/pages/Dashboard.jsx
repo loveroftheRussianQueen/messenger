@@ -21,15 +21,15 @@ const Dashboard = () => {
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike} alt=""/>
+                            <img src={spike} alt="User Avatar"/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike} alt=""/>
+                            <img src={spike} alt="User Avatar"/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike} alt=""/>
+                            <img src={spike} alt="User Avatar"/>
                             <span>Johny Depp</span>
                         </Conversation>
                     </ChatMenuWrapper>
