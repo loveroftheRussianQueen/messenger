@@ -17,7 +17,7 @@ const Dashboard = () => {
                     <ChatMenuWrapper>
                         <ChatMenuInput placeholder="Search contact"/>
                         <Conversation>
-                            <img src={spike} alt=""/>
+                            <img src={spike} alt="User avatar"/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
