@@ -17,19 +17,19 @@ const Dashboard = () => {
                     <ChatMenuWrapper>
                         <ChatMenuInput placeholder="Search contact"/>
                         <Conversation>
-                            <img src={spike}/>
+                            <img src={spike} alt=""/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike}/>
+                            <img src={spike} alt=""/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike}/>
+                            <img src={spike} alt=""/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike}/>
+                            <img src={spike} alt=""/>
                             <span>Johny Depp</span>
                         </Conversation>
                     </ChatMenuWrapper>
