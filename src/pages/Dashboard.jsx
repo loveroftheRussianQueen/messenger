@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
       <>
       <Header>
-            <img src={logo}/>
+            <img src={logo} alt =""/>
             Messenger
         </Header>
       <Container>
