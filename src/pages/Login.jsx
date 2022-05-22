@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <Container>
         <Header>
-            <img src={logo}/>
+            <img src={logo} alt="Site logo"/>
             Messenger
         </Header>
         <Link to="/dashboard" style={{textDecoration: "none"}}>

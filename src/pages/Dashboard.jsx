@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
       <>
       <Header>
-            <img src={logo}/>
+            <img src={logo} alt ="Site logo"/>
             Messenger
         </Header>
       <Container>
@@ -17,19 +17,19 @@ const Dashboard = () => {
                     <ChatMenuWrapper>
                         <ChatMenuInput placeholder="Search contact"/>
                         <Conversation>
-                            <img src={spike}/>
+                            <img src={spike} alt="User avatar"/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike}/>
+                            <img src={spike} alt="User Avatar"/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike}/>
+                            <img src={spike} alt="User Avatar"/>
                             <span>Johny Depp</span>
                         </Conversation>
                         <Conversation>
-                            <img src={spike}/>
+                            <img src={spike} alt="User Avatar"/>
                             <span>Johny Depp</span>
                         </Conversation>
                     </ChatMenuWrapper>
