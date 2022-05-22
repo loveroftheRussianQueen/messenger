@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import google from '../assets/google.png';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -10,10 +11,12 @@ const Login = () => {
             <img src={logo}/>
             Messenger
         </Header>
-      <Button>
+        <Link to="/dashboard" style={{textDecoration: "none"}}>
+        <Button>
       Sign in with Google
         <img src={google} alt="Google" />
       </Button>
+        </Link>
     </Container>
   )
 }

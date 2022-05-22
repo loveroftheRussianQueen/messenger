@@ -118,9 +118,9 @@ const ChatMenuWrapper = styled.div`
 `
 
 const ChatMenuInput = styled.input`
-        width: 90%;
+        width: 100%;
         padding: 10px 0;
-        border: none;
+        border-bottom: 1px solid black;
 `
 
 const ChatBox = styled.div`
