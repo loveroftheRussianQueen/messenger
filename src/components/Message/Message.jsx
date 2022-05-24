@@ -8,7 +8,8 @@ const Message = ({own}) => {
         <div className="messageTop">
             <img 
             className="msg_img"
-            src={spike}/>
+            src={spike}
+            alt=""/>
             <p className="msg_text">hello this is mario</p>
         </div>
         <div className="messageBottom">1 hour ago</div>
