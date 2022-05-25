@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../firebase";
-import {setDoc, doc, Timestamp} from 'firebase/firestore';
+import {updateDoc, doc} from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
-const Register = () => {
+const Login = () => {
 
     const [data, setData] = useState({
-        name: "",
         email: "",
         password: "",
         error: null,
@@ -16,7 +15,7 @@ const Register = () => {
 
     const navigate = useNavigate();
 
-    const {name, email, password, error, loading} = data;
+    const { email, password, error, loading} = data;
 
     const handleChange = e =>{
         setData({...data, [e.target.name]: e.target.value})
@@ -25,23 +24,18 @@ const Register = () => {
     const handleSubmit = async e =>{
         e.preventDefault();
         setData({...data, error: null, loading: true})
-        if(!name || !email || !password){
+        if(!email || !password){
             setData({...data, error: 'Пожалуйста, заполните все поля'})
         }
         try{
-            const result = await createUserWithEmailAndPassword(
+            const result = await signInWithEmailAndPassword(
                 auth, 
                 email, 
                 password);
-                await setDoc(doc(db, "users", result.user.uid), {
-                    uid: result.user.uid,
-                    name,
-                    email,
-                    createdAt: Timestamp.fromDate(new Date()),
+                await updateDoc(doc(db, "users", result.user.uid), {
                     isOnline: true,
                   });
-            setData({
-                name:'', 
+            setData({ 
                 email:'', 
                 password: '', 
                 error: null, 
@@ -54,12 +48,8 @@ const Register = () => {
 
   return (
     <section>
-        <h3>Создать аккаунт</h3>
+        <h3>Войти в аккаунт</h3>
         <form className="form" onSubmit={handleSubmit}>
-            <div className="input_container">
-                <label hmtlfor="name">Никнейм</label>
-                <input type="text" name="name" value={name} onChange={handleChange}></input>
-            </div>
             <div className="input_container">
                 <label hmtlfor="email">Почта</label>
                 <input type="text" name="email" value={email} onChange={handleChange}></input>
@@ -71,7 +61,7 @@ const Register = () => {
             {error ? <p className="error">{error}</p> : null}
             <div className="btn_container">
                 <button className="btn" disabled={loading}>
-                    {loading ? 'Создается аккаунт...' : 'Регистрация'}
+                    {loading ? 'Вход в аккаунт..' : 'Войти'}
                 </button>
             </div>
         </form>
@@ -79,4 +69,4 @@ const Register = () => {
   )
 }
 
-export default Register;
+export default Login;
