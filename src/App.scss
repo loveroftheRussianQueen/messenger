@@ -1,0 +1,25 @@
+@use './sass/index.scss' as *;
+
+:root {
+  --color-1: #242526;
+  --color-2: white;
+  --color-3: #0084ff;
+  --color-4: grey;
+  --color-5: #eb4034;
+  --color-6: #333;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $font-family;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  @include flex(center, unset);
+}
+
+

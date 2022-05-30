@@ -1,0 +1,24 @@
+$body-bg: rgb(5, 4, 4);
+$main-color: #4eac6d;
+$main-color-rgb: 78,172,109;
+$txt-color: #fff;
+
+$white: #fff;
+$black: #000;
+$gray: #495057;
+
+$box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+$header-height: 5rem;
+$header-shrink-height: 5rem;
+$border-radius: 30px;
+
+$mobile-width: 464px;
+$tablet-width: 1024px;
+
+$breakpoints: (
+    mobile: $mobile-width,
+    tablet: $tablet-width,
+);
+
+$font-family: "Montserrat", sans-serif;

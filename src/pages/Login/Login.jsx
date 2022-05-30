@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../firebase";
+import { auth, db } from "../../firebase";
 import {updateDoc, doc} from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import './Login.scss';
+import girl from '../../assets/girl.png';
 
 const Login = () => {
 
@@ -47,16 +49,21 @@ const Login = () => {
     }
 
   return (
-    <section>
-        <h3>Войти в аккаунт</h3>
-        <form className="form" onSubmit={handleSubmit}>
+      <div className="login">
+          <h1>Messenger</h1>
+          <img src={girl} alt="girl"/>
+         <section>
+        <h3>Добро пожаловать!</h3>
+        <p>Войдите в аккаунт чтобы продолжить</p>
+        <div className="form">
+        <form onSubmit={handleSubmit}>
             <div className="input_container">
                 <label hmtlfor="email">Почта</label>
-                <input type="text" name="email" value={email} onChange={handleChange}></input>
+                <input type="text" name="email" value={email} placeholder="Введите вашу почту" onChange={handleChange}></input>
             </div>
             <div className="input_container">
                 <label hmtlfor="password">Пароль</label>
-                <input type="password" name="password" value={password} onChange={handleChange}></input>
+                <input type="password" name="password" value={password} placeholder="Введите пароль" onChange={handleChange}></input>
             </div>
             {error ? <p className="error">{error}</p> : null}
             <div className="btn_container">
@@ -65,7 +72,13 @@ const Login = () => {
                 </button>
             </div>
         </form>
+        <span className="question">
+            У вас нет аккаунта?
+            <Link to="/register">Зарегистрироваться</Link>
+        </span>
+        </div>
     </section>
+      </div>
   )
 }
 

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../firebase";
+import { auth, db } from "../../firebase";
 import {setDoc, doc, Timestamp} from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import './Register.scss';
+import girl from '../../assets/girl.png';
 
 const Register = () => {
 
@@ -53,20 +55,25 @@ const Register = () => {
     }
 
   return (
-    <section>
-        <h3>Создать аккаунт</h3>
-        <form className="form" onSubmit={handleSubmit}>
+      <div className="register">
+        <h1>Messenger</h1>
+        <img src={girl} alt="girl"/>
+        <section>
+        <h3>Добро пожаловать!</h3>
+        <p>Зарегистрируйтесь чтобы использовать приложение</p>
+        <div className="form">
+        <form onSubmit={handleSubmit}>
             <div className="input_container">
                 <label hmtlfor="name">Никнейм</label>
-                <input type="text" name="name" value={name} onChange={handleChange}></input>
+                <input type="text" name="name" placeholder="Придумайте никнейм" value={name} onChange={handleChange}></input>
             </div>
             <div className="input_container">
                 <label hmtlfor="email">Почта</label>
-                <input type="text" name="email" value={email} onChange={handleChange}></input>
+                <input type="text" name="email" placeholder="Введите вашу почту" value={email} onChange={handleChange}></input>
             </div>
             <div className="input_container">
                 <label hmtlfor="password">Пароль</label>
-                <input type="password" name="password" value={password} onChange={handleChange}></input>
+                <input type="password" name="password" placeholder="Придумайте сложный пароль" value={password} onChange={handleChange}></input>
             </div>
             {error ? <p className="error">{error}</p> : null}
             <div className="btn_container">
@@ -75,7 +82,13 @@ const Register = () => {
                 </button>
             </div>
         </form>
+        <span className="question">
+            У вас уже есть аккаунт?
+            <Link to="/login">Войти</Link>
+        </span>
+        </div>
     </section>
+      </div>
   )
 }
 

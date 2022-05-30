@@ -1,0 +1,21 @@
+@use './variables' as *;
+
+@mixin mobile{
+    @media only screen and (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin media($keys...){
+    @each $key in $keys { 
+      @media (max-width: map-get($breakpoints, $key)){
+        @content
+      } 
+    }
+  }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Camera from '../assets/svg/Camera';
-import spike from '../assets/spike_pic.jpg';
-import { storage, db, auth } from "../firebase";
+import Camera from '../../assets/svg/Camera';
+import spike from '../../assets/spike_pic.jpg';
+import { storage, db, auth } from "../../firebase";
 import {
   ref,
   getDownloadURL,
@@ -9,8 +9,10 @@ import {
   deleteObject,
 } from "firebase/storage";
 import { getDoc, doc, updateDoc } from "firebase/firestore";
-import { Delete } from "../assets/svg/Delete";
+import { Delete } from "../../assets/svg/Delete";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/NavBar/Navbar";
+import './Profile.scss';
 
 const Profile = () => {
   const [img, setImg] = useState("");
@@ -68,9 +70,9 @@ const Profile = () => {
     }
   };
   return user ? (
-    <section>
-      <div className="profile_container">
-        <div className="img_container">
+    <div className="profile">
+      <div className="profile__container">
+        <div className="profile__img_container">
           <img src={user.avatar || spike} alt="avatar" />
           <div className="overlay">
             <div>
@@ -88,14 +90,14 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="text_container">
+        <div className="profile__text_container">
           <h3>{user.name}</h3>
           <p>{user.email}</p>
           <hr />
           <small>Joined on: {user.createdAt.toDate().toDateString()}</small>
         </div>
       </div>
-    </section>
+    </div>
   ) : null;
 };
 

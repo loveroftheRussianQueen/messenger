@@ -1,0 +1,153 @@
+@use '../../sass/index.scss' as *;
+
+.home_container {
+    flex: 1;
+    @include flex(unset, unset);
+    overflow-y: auto;
+    height: 100vh;
+
+    .users_container {
+      flex: 1;
+      overflow-y: auto;
+      background-color: #fff;
+      -webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
+      box-shadow: 0 2px 4px rgba(15,34,58,.12);
+      overflow:hidden;
+
+      &.hidden{
+        display: none;
+      }
+
+      h4, h5  {
+        font-family: $font-family;
+        font-weight: 300;
+        text-align: center;
+        font-size: 1.2em;
+        color: #495057;
+        padding: 20px;
+      }
+
+      h5{
+        font-size: 1em;
+      }
+
+      .title{
+        background-color: #413f3f;
+        
+        h4{
+          color: $white;
+        }
+      }
+    }
+
+    .messages_container {
+      flex: 5;
+      position: relative;
+      width: 100%;
+
+      &.active{
+        display: block;
+      }
+
+      @include media(tablet, mobile){
+        display: none;
+      }
+
+      &__user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:10px;
+        padding: 6px;
+        text-align: center;
+        background-color: #f2f2f2;
+        border-bottom: 1px solid #9898a8;
+
+        .user_info{
+            @include flex(unset, unset);
+            gap: 20px;
+
+          img{
+            width:50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          .user_text{
+            .user_name{
+              text-transform: capitalize;
+              color: $gray;
+            }
+  
+            .user_status{
+              color: #797c8c;
+              text-align: left;
+              margin-top: 5px;
+            }
+        }
+        }
+
+        .user_icons{
+            @include flex(unset, unset);
+            gap:30px;
+
+            @include media(tablet, mobile){
+              display: none;
+
+            }
+
+          .icon{
+            width: 25px;
+            height: 25px;
+            color: #797c8c;
+            cursor: pointer;
+          }
+        }
+
+        #exit{
+          width: 25px;
+          height: 25px;
+          color: #797c8c;
+          cursor: pointer;
+          display: none;
+
+          @include media(tablet, mobile){
+            display: block;
+          }
+        }
+      }
+
+      .messages {
+        height: calc(100vh - 145px);
+        overflow-y: auto;
+        border-bottom: 1px solid $gray;
+        background: url('../../assets/chat_bg.png');
+        background-size: 200px 200px;
+        background-repeat: repeat;
+        background-color: rgba($color: #81c5a3, $alpha: 0.2);
+
+        @include media(tablet, mobile){
+          height: calc(100vh - 190px);
+        }
+      }
+
+      .bg{
+        height:100%;
+        background-size: cover;
+        background: linear-gradient( 
+          rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1) ), 
+        url('../../assets/dark_bg.jpg');
+        background-repeat: no-repeat; 
+        background-position: center; 
+
+        .no_conv {
+          font-size: 28px;
+          font-family: $font-family;
+          font-weight: 100;
+          color: #97a0a8;
+          text-align: center;
+        }
+      }
+    }
+  }
