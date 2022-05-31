@@ -1,12 +1,13 @@
 import React from 'react'
 
-export const Delete = ({deleteImage}) => {
+export const Delete = ({deleteImage, id}) => {
   return (
     <svg 
     onClick={deleteImage}
+    id={id}
     xmlns="http://www.w3.org/2000/svg" 
-    style={{width: '25px', 
-    height: '25px', 
+    style={{width: '50px', 
+    height: '50px', 
     cursor: 'pointer', 
     color: "#f24957"}}
     viewBox="0 0 20 20" 

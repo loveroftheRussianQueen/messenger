@@ -5,7 +5,7 @@ import { db } from "../../firebase";
 import './User.scss';
 import Moment from 'react-moment';
 
-const User = ({ user1, user, selectUser, chat, setActive }) => {
+const User = ({ user1, user, selectUser, chat, setActive, setActiveUser }) => {
   const user2 = user?.uid;
   const [data, setData] = useState("");
 
@@ -32,7 +32,7 @@ const User = ({ user1, user, selectUser, chat, setActive }) => {
             className={`user__status ${user.isOnline ? "online" : "offline"}`}
           ></div>
         </div>
-        <div className="open_dialog" onClick={() => {selectUser(user); setActive(true)}}></div>
+        <div className="open_dialog" onClick={() => {selectUser(user); setActive(true); setActiveUser(false)}}></div>
         <Moment className="time" format="HH:MM">{data?.createdAt?.toDate()}</Moment>
         {data?.from !== user1 && data?.unread && (
               <small className="unread">1</small>

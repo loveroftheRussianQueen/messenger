@@ -72,14 +72,14 @@ const Profile = () => {
   return user ? (
     <div className="profile">
       <div className="profile__container">
-        <div className="profile__img_container">
+        <div className="profile__container__img">
           <img src={user.avatar || spike} alt="avatar" />
           <div className="overlay">
             <div>
               <label htmlFor="photo">
                 <Camera />
               </label>
-              {user.avatar ? <Delete deleteImage={deleteImage} /> : null}
+              {user.avatar ? <Delete id="delete" deleteImage={deleteImage} /> : null}
               <input
                 type="file"
                 accept="image/*"
@@ -90,11 +90,13 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div className="profile__text_container">
-          <h3>{user.name}</h3>
-          <p>{user.email}</p>
-          <hr />
-          <small>Joined on: {user.createdAt.toDate().toDateString()}</small>
+        <div className="profile__container__text">
+          <h3>Nickname:</h3>
+          <h4>{user.name}</h4>
+          <h3>Email:</h3>
+          <h4>{user.email}</h4>
+          <h3>Присоединился:</h3>
+          <h4>{user.createdAt.toDate().toDateString()}</h4>
         </div>
       </div>
     </div>

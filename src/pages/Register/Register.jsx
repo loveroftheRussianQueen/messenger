@@ -60,7 +60,7 @@ const Register = () => {
         <img src={girl} alt="girl"/>
         <section>
         <h3>Добро пожаловать!</h3>
-        <p>Зарегистрируйтесь чтобы использовать приложение</p>
+        <p>Зарегистрируйтесь чтобы <br className="line_break"/> использовать приложение</p>
         <div className="form">
         <form onSubmit={handleSubmit}>
             <div className="input_container">

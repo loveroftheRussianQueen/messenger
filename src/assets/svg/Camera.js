@@ -3,7 +3,10 @@ import React from 'react';
 const Camera = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" 
-    style={{width:"25px", height:"25px", cursor: "pointer"}}
+    style={{
+      width:"50px", 
+      height:"50px", 
+      cursor: "pointer"}}
     viewBox="0 0 20 20" 
     fill="currentColor">
         <path fillRule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 

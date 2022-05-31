@@ -31,6 +31,7 @@ const Home = () => {
   const [img, setImg] = useState("");
   const [msgs, setMsgs] = useState([]);
   const [active, setActive] = useState(false);
+  const [activeUser, setActiveUser] = useState(true);
 
   const user1 = auth.currentUser.uid;
 
@@ -114,7 +115,7 @@ const Home = () => {
   return (
     <>
       <div className="home_container">
-      <div className={active ? 'users_container hidden' : 'users_container'}>
+      <div className={activeUser ? 'users_container active' : 'users_container'}>
       <div className="title">
         <h4>Chats</h4>
       </div>
@@ -124,6 +125,7 @@ const Home = () => {
             user={user}
             selectUser={selectUser}
             setActive={setActive}
+            setActiveUser={setActiveUser}
             user1={user1}
             chat={chat}
           />
@@ -145,7 +147,7 @@ const Home = () => {
                    <div className="icon">{icon}</div>
                 )}
             </div>
-                <ArrowIcon id="exit" onClick={() => setActive(false)}/>
+                <ArrowIcon id="exit" onClick={() => {setActive(false); setActiveUser(true)}}/>
             </div>
             <div className="messages">
               {msgs.length
@@ -163,7 +165,7 @@ const Home = () => {
           </>
         ) : (
           <div className="bg">
-            <div className="no_conv">fuck you</div>
+            <div className="no_conv">Выберите диалог</div>
           </div>
         )}
       </div>

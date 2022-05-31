@@ -14,8 +14,12 @@
       box-shadow: 0 2px 4px rgba(15,34,58,.12);
       overflow:hidden;
 
-      &.hidden{
+      @include media(tablet, mobile){
         display: none;
+      }
+
+      &.active{
+        display: block;
       }
 
       h4, h5  {
@@ -28,7 +32,10 @@
       }
 
       h5{
-        font-size: 1em;
+        font-size: 1.3em;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        padding-left: 10px;
       }
 
       .title{
@@ -36,6 +43,7 @@
         
         h4{
           color: $white;
+          font-weight: 500;
         }
       }
     }
@@ -77,6 +85,8 @@
             .user_name{
               text-transform: capitalize;
               color: $gray;
+              font-weight: 500;
+              font-size: 18px;
             }
   
             .user_status{
@@ -132,19 +142,18 @@
       }
 
       .bg{
+        @include flex(center, center);
         height:100%;
         background-size: cover;
-        background: linear-gradient( 
-          rgba(0, 0, 0, 0.1), 
-        rgba(0, 0, 0, 0.1) ), 
-        url('../../assets/dark_bg.jpg');
+        background: rgb(46,46,46);
+        background: radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(0,0,0,1) 37%);  
         background-repeat: no-repeat; 
         background-position: center; 
 
         .no_conv {
           font-size: 28px;
           font-family: $font-family;
-          font-weight: 100;
+          font-weight: 700;
           color: #97a0a8;
           text-align: center;
         }

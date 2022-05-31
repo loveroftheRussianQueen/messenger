@@ -19,9 +19,15 @@
         gap:40px;
         margin-top: 30px;
 
-        @include media(tablet, mobile){
+        @include mobile{
             flex-direction: row;
             justify-content: center;
+            margin-top: 20px;
+        }
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-evenly;
             margin-top: 20px;
         }
     }
@@ -41,5 +47,10 @@
           color: #dfdbdb;
           cursor: pointer;
           font-weight: 100;
+
+          @include tablet{
+              width:35px;
+              height: 35px;
+          }
       }
   }

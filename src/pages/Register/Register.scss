@@ -55,7 +55,11 @@
         @include media(tablet, mobile){
           flex: 1;
           max-width: 100%;
-          max-height: 50%;
+          max-height: 60%;
+        }
+
+        @include tablet{
+          width: 80%;
         }
   
         h3{
@@ -69,6 +73,15 @@
         color: #797c8c;
         margin-top: 10px;
         font-size: 18px;
+        line-height: 1.5;
+        
+        .line_break{
+          display: none;
+
+          @include media(tablet, mobile){
+            display: block;
+          }
+        }
       }
   
       .form {
@@ -151,6 +164,10 @@
               border: 1px solid #cfd4d8;
               outline: none;
               -webkit-appearance: none;
+
+              @include media(tablet, mobile){
+                width: 90%;
+              }
             }
   
             label{
@@ -164,5 +181,4 @@
         }
       }
     }
-
 }
