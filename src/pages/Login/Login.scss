@@ -1,0 +1,177 @@
+@use '../../sass/index.scss' as *;
+
+.login{
+    @include flex(unset, unset);
+    justify-content: space-between;
+    width:100%;
+    height: 100vh;
+    background-color: $main-color;
+
+    @include media(tablet,mobile){
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    @include tablet{
+      align-items: center;
+    }
+
+    h1{
+      flex: 1;
+      margin:50px;
+      color: $white;
+      font-weight: 200;
+      cursor: pointer;
+
+      @include media(tablet, mobile){
+        flex: 0;
+        font-size: 26px;
+        font-weight:lighter;
+        text-align: center;
+      }
+    }
+
+    img{
+      position: absolute;
+      max-width: 40%;
+      bottom: 10%;
+      left:10%;
+
+      @include media(tablet, mobile){
+          display: none;
+      }
+    }
+
+    section{
+      flex: 3;
+      @include flex(center, unset);
+      flex-direction: column;
+      padding-top: 50px;
+      max-width: 50%;
+      max-height: 70%;
+      background-color: #fff;
+      border-radius: 16px;
+      margin: 24px;
+
+      @include media(tablet, mobile){
+        flex: 1;
+        max-width: 100%;
+        max-height: 50%;
+      }
+
+      @include tablet{
+        width: 80%;
+      }
+
+      h3{
+        text-align: center;
+        color: #495057;
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    p{
+      color: #797c8c;
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .form {
+      @include flex(center, flex-start);
+      flex-direction: column;
+      flex: 1;
+      width:100%;
+      margin-top: 30px;
+      padding: 0px 20px;
+
+      .question{
+        color: #797c8c;
+        font-size: 18px;
+
+        a{
+          color: $main-color;
+          font-size: 18px;
+          margin-left: 10px;
+        }
+      }
+
+      form{
+          width:30%;
+
+          @include mobile{
+              width: 70%;
+          }
+
+          @include tablet{
+            width: 80%;
+          }
+
+          .btn_container {
+            margin: 10px 0px;
+            text-align: center;
+
+            .btn {
+              padding: 10px;
+              margin-top: 10px;
+              border-radius: 5px;
+              outline: none;
+              border: 1px solid $main-color;
+              background: $main-color;
+              color: $white;
+              cursor: pointer;
+              transition: 0.3s ease-in-out all;
+              font-size: 16px;
+              width:50%;
+            }
+            @include media(tablet, mobile){
+                margin-bottom: 20px;
+            }
+            
+            .btn:hover {
+              background: #489b64;
+            }
+            
+            .error {
+              text-align: center;
+              color: var(--color-5);
+            }
+          }
+
+        .input_container {
+          @include flex(unset, unset);
+          flex-direction: column;
+          margin-top: 20px;
+
+          input {
+            display: block;
+            width: 100%;
+            padding: .5rem 1rem;
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #cfd4d8;
+            outline: none;
+            -webkit-appearance: none;
+
+            @include media(tablet, mobile){
+              width: 90%;
+            }
+          }
+
+          label{
+              font-weight: 500;
+              font-size: 18px;
+              color: #575b5f;
+              margin-bottom: 10px;
+          }
+          
+        }
+      }
+    }
+  }
+    
+}
