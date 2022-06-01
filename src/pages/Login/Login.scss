@@ -23,11 +23,16 @@
       font-weight: 700;
       cursor: pointer;
 
-      @include media(tablet, mobile){
+      @include mobile{
         flex: 0;
+        margin: 15px;  
         font-size: 26px;
-        font-weight:lighter;
+        font-weight: 300;
         text-align: center;
+      }
+
+      @include tablet{
+        flex: 0;
       }
     }
 
@@ -53,14 +58,18 @@
       border-radius: 16px;
       margin: 24px;
 
-      @include media(tablet, mobile){
-        flex: 1;
-        min-width: 90%;
-        max-height: 55%;
+      @include tablet{
+        flex:1;
+        min-width: 80%;
+        max-height: 60%;
+        margin: 10px;
       }
 
-      @include tablet{
-        width: 80%;
+      @include mobile{
+        flex: 1;
+        min-width: 90%;
+        max-height: 70%;
+        margin: 0px;
       }
 
       h3{

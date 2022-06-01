@@ -73,7 +73,7 @@ const Profile = () => {
     <div className="profile">
       <div className="profile__container">
         <div className="profile__container__img">
-          <img src={user.avatar || spike} alt="avatar" />
+          <img src={user.avatar || spike} alt="avatar" className="img"/>
           <div className="overlay">
             <div>
               <label htmlFor="photo">
