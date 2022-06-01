@@ -18,9 +18,9 @@
 
     h1{
         flex: 1;
-        margin:50px;
+        margin:20px;
         color: $white;
-        font-weight: 200;
+        font-weight: 700;
         cursor: pointer;
 
         @include media(tablet, mobile){
@@ -54,8 +54,8 @@
 
         @include media(tablet, mobile){
           flex: 1;
-          max-width: 100%;
-          max-height: 60%;
+          min-width: 90%;
+          max-height: 65%;
         }
 
         @include tablet{
@@ -67,6 +67,10 @@
           color: #495057;
           font-size: 28px;
           font-weight: 300;
+
+          @include media(tablet, mobile){
+            font-size: 25px;
+          }
       }
   
       p{
@@ -89,7 +93,6 @@
         flex-direction: column;
         flex: 1;
         width:100%;
-        margin-top: 30px;
         padding: 0px 20px;
   
         .question{

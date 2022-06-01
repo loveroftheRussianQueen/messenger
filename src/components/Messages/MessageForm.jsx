@@ -20,7 +20,6 @@ const MessageForm = ({handleSubmit, text, setText, setImg}) => {
             type="text" 
             placeholder="Введите сообщение" 
             value={text} 
-            autoFocus
             onChange={e => setText(e.target.value)}/>
         </div>
         <div>

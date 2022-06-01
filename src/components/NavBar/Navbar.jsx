@@ -31,29 +31,29 @@ const Navbar = () => {
           <div className="nav_bar__links">
           <NavLink to="/"
                 children={({ isActive }) => 
-                (isActive ? <HomeIcon className="active"/> : <HomeIcon className=""/>)}
+                (isActive ? <HomeIcon className="icon active"/> : <HomeIcon className="icon"/>)}
                 />
                 {user ? (
                 <>
                     <NavLink to="/profile"
                     children={({ isActive }) => 
-                    (isActive ? <UserIcon className="active"/> : <UserIcon className=""/>)}/>
-                    <LoginIcon onClick={handleSignout}/>
+                    (isActive ? <UserIcon className="icon active"/> : <UserIcon className="icon"/>)}/>
+                    <LoginIcon onClick={handleSignout} className="icon active"/>
                 </>    )
                 :(
                     <>
                     <NavLink to="/register"
                     children={({ isActive }) => 
-                    (isActive ? <RegisterIcon className="active"/> : <RegisterIcon className=""/>)}/>
+                    (isActive ? <RegisterIcon className="icon active"/> : <RegisterIcon className="icon"/>)}/>
                     <NavLink to="/login"
                     children={({ isActive }) => 
-                    (isActive ? <LogoutIcon className="active"/> : <LogoutIcon className=""/>)}/>
+                    (isActive ? <LogoutIcon className="icon active"/> : <LogoutIcon className="icon"/>)}/>
                     </>
                 )   
             }
-        <CallIcon/>
-        <BookMarkIcon/>
-        <SettingsIcon/>
+        <CallIcon className="icon"/>
+        <BookMarkIcon className="icon"/>
+        <SettingsIcon className="icon"/>
           </div>
       </div>
   );
