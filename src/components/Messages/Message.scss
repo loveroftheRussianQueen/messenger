@@ -2,14 +2,14 @@
 
 .message_wrapper {
     margin-top: 5px;
-    padding: 0px 5px;
+    padding: 0px;
 
       p{
         padding: 15px;
         font-family: $font-family;
         display: inline-block;
         max-width: 50%;
-        text-align: center;
+        text-align: left;
         border-radius: 10px;
 
         img{
@@ -54,6 +54,7 @@
     padding-right: 20px;
     height: 80px;
     background-color: #f2f2f2;
+    z-index: 999;
 
     @include media(tablet, mobile){
       height: 60px;
