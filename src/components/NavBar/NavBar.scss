@@ -15,7 +15,7 @@
     }
 
     &__links{
-        position: inherit;
+        position: relative;
         @include flex(center, flex-start);
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
