@@ -57,6 +57,7 @@
     z-index: 999;
 
     @include media(tablet, mobile){
+      position: sticky;
       height: 60px;
     }
 
@@ -71,6 +72,12 @@
         font-family: $font-family;
         font-size: 15px;
         font-weight: 100;
+
+        @include media(tablet, mobile){
+            padding: 4px;
+            font-size: 4px;
+        }
+
 
         #icon{
             width: 25px;
