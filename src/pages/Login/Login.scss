@@ -8,6 +8,7 @@
     background-color: $main-color;
 
     @include media(tablet,mobile){
+        min-height: auto;
         flex-direction: column;
         justify-content: unset;
     }
@@ -88,6 +89,7 @@
       margin-top: 10px;
       font-size: 18px;
       line-height: 1.5;
+      text-align: center
     }
 
     .form {

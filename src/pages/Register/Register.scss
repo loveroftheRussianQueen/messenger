@@ -8,6 +8,7 @@
     background-color: $main-color;
 
     @include media(tablet,mobile){
+      min-height: auto;
       flex-direction: column;
       justify-content: unset;
   }
