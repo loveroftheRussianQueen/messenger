@@ -8,7 +8,7 @@
 
     .users_container {
       flex: 1;
-      overflow: scroll;
+      overflow: hidden;
       background-color: #fff;
       -webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
       box-shadow: 0 2px 4px rgba(15,34,58,.12);
