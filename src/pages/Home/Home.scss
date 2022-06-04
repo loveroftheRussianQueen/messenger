@@ -83,6 +83,7 @@
           .user_text{
             .user_name{
               text-transform: capitalize;
+              text-align: left;
               color: $gray;
               font-weight: 500;
               font-size: 18px;
@@ -143,17 +144,16 @@
       .bg{
         @include flex(center, center);
         height:100%;
-        background-size: cover;
-        background: rgb(46,46,46);
-        background: radial-gradient(circle, rgba(46,46,46,1) 0%, rgba(0,0,0,1) 37%);  
-        background-repeat: no-repeat; 
-        background-position: center; 
+        background: url('../../assets/chat_bg.png');
+        background-size: 200px 200px;
+        background-repeat: repeat;
+        background-color: rgba($color: #5db487, $alpha: 0.6);
 
         .no_conv {
-          font-size: 28px;
+          font-size: 32px;
           font-family: $font-family;
-          font-weight: 700;
-          color: #97a0a8;
+          font-weight: 900;
+          color: #f5f5f5;
           text-align: center;
         }
       }
