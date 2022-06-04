@@ -11,7 +11,6 @@ import {
 import { getDoc, doc, updateDoc } from "firebase/firestore";
 import { Delete } from "../../assets/svg/Delete";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../../components/NavBar/Navbar";
 import './Profile.scss';
 
 const Profile = () => {
