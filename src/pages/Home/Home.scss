@@ -12,6 +12,20 @@
       background-color: #fff;
       -webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
       box-shadow: 0 2px 4px rgba(15,34,58,.12);
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar{
+        width: 0.3em;
+      }
+
+      &::-webkit-scrollbar-track{
+        background-color: rgb(64, 139, 123);
+      }
+
+      &::-webkit-scrollbar-thumb{
+        background-color: rgb(114, 204, 174);
+        outline: 1px solid slategrey;
+      }
 
       @include media(tablet, mobile){
         display: none;
@@ -65,10 +79,12 @@
         align-items: center;
         justify-content: space-between;
         gap:10px;
-        padding: 6px;
+        padding: 7px;
         text-align: center;
         background-color: #f2f2f2;
-        border-bottom: 1px solid #9898a8;
+        -webkit-box-shadow: 0px 7px 6px 1px rgba(40, 67, 88, 0.14);
+        -moz-box-shadow: 0px 7px 6px 1px rgba(40, 67, 88, 0.14);
+        box-shadow: 0px 7px 6px 1px rgba(40, 67, 88, 0.14);
 
         .user_info{
             @include flex(unset, unset);
@@ -129,8 +145,7 @@
 
       .messages {
         height: calc(100vh - 145px);
-        overflow-y: auto;
-        border-bottom: 1px solid $gray;
+        overflow-y: scroll;
         background: url('../../assets/chat_bg.png');
         background-size: 200px 200px;
         background-repeat: repeat;
@@ -138,6 +153,19 @@
 
         @include media(tablet, mobile){
           height: calc(100vh - 190px);
+        }
+
+        &::-webkit-scrollbar{
+          width: 0.3em;
+        }
+  
+        &::-webkit-scrollbar-track{
+          background-color: rgb(64, 139, 123);
+        }
+  
+        &::-webkit-scrollbar-thumb{
+          background-color: rgb(114, 204, 174);
+          outline: 1px solid slategrey;
         }
       }
 
