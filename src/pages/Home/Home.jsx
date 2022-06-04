@@ -49,7 +49,7 @@ const Home = () => {
       setUsers(users);
     });
     return () => unsub();
-  }, []);
+  },);
 
   const selectUser = async (user) => {
     setChat(user);
@@ -117,7 +117,7 @@ const Home = () => {
       <div className="home_container">
       <div className={activeUser ? 'users_container active' : 'users_container'}>
       <div className="title">
-        <h4>Chats</h4>
+        <h4 className="chats">Chats</h4>
       </div>
         {users.map((user) => (
           <User

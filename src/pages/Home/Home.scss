@@ -7,12 +7,13 @@
     height: 100vh;
 
     .users_container {
+      position: relative;
       flex: 1;
-      overflow: hidden;
       background-color: #fff;
       -webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
       box-shadow: 0 2px 4px rgba(15,34,58,.12);
       overflow-y: scroll;
+      overflow-x: hidden;
 
       &::-webkit-scrollbar{
         width: 0.3em;
@@ -51,6 +52,8 @@
       }
 
       .title{
+        position: relative;
+        top: 0;
         background-color: #413f3f;
         
         h4{
