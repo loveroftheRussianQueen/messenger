@@ -1,15 +1,13 @@
 @use '../../sass/index.scss' as *;
 
 .login{
-  position: relative;
     @include flex(unset, unset);
     justify-content: space-between;
     width:100%;
-    height: 100vh;
+    min-height: auto;
     background-color: $main-color;
 
     @include media(tablet,mobile){
-        min-height: auto;
         flex-direction: column;
         justify-content: unset;
     }
