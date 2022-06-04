@@ -1,6 +1,7 @@
 @use '../../sass/index.scss' as *;
 
 .login{
+  position: relative;
     @include flex(unset, unset);
     justify-content: space-between;
     width:100%;
