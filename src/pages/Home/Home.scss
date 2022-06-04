@@ -24,7 +24,6 @@
 
       &::-webkit-scrollbar-thumb{
         background-color: rgb(114, 204, 174);
-        outline: 1px solid slategrey;
       }
 
       @include media(tablet, mobile){
