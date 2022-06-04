@@ -4,7 +4,7 @@
     @include flex(unset, unset);
     justify-content: space-between;
     width:100%;
-    min-height: auto;
+    max-height: auto;
     background-color: $main-color;
 
     @include media(tablet,mobile){
