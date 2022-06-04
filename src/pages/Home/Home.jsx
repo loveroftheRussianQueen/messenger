@@ -18,7 +18,6 @@ import User from '../../components/User/User';
 import MessageForm from "../../components/Messages/MessageForm";
 import Message from "../../components/Messages/Message";
 import spike from '../../assets/spike_pic.jpg';
-import Navbar from "../../components/NavBar/Navbar";
 import './Home.scss';
 
 import icons from '../../assets/svg/DialogIcons/IconsArray';
