@@ -7,13 +7,33 @@
     height: 100vh;
 
     .users_container {
+      @include flex(unset, unset);
+      flex-direction: column;
       position: relative;
       flex: 1;
       background-color: #fff;
       -webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
       box-shadow: 0 2px 4px rgba(15,34,58,.12);
-      overflow-y: scroll;
-      overflow-x: hidden;
+
+      .title{
+        position: relative;
+        top: 0;
+        background-color: #413f3f;
+        
+        h4{
+          color: $white;
+          font-weight: 500;
+        }
+      }
+      
+
+      .users{
+        position: relative;
+        flex: 1;
+        max-height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
 
       &::-webkit-scrollbar{
         width: 0.3em;
@@ -49,17 +69,6 @@
         font-weight: 500;
         letter-spacing: 0.5px;
         padding-left: 10px;
-      }
-
-      .title{
-        position: relative;
-        top: 0;
-        background-color: #413f3f;
-        
-        h4{
-          color: $white;
-          font-weight: 500;
-        }
       }
     }
 

@@ -54,7 +54,7 @@
     padding-right: 20px;
     height: 80px;
     background-color: #f2f2f2;
-    z-index: 999;
+    z-index: 99;
 
     @include media(tablet, mobile){
       position: sticky;

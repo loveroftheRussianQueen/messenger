@@ -4,7 +4,7 @@
     height:100vh;
     width: 75px;
     background-color:#2e2e2e;
-    z-index: 9;
+    z-index: 999;
 
     @include media(tablet, mobile){
         position: fixed;

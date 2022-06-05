@@ -115,11 +115,12 @@ const Home = () => {
   return (
     <>
       <div className="home_container">
-      <div className={activeUser ? 'users_container active' : 'users_container'}>
-      <div className="title">
+        <div className={activeUser ? 'users_container active' : 'users_container'}>
+        <div className="title">
         <h4 className="chats">Chats</h4>
       </div>
-        {users.map((user) => (
+      <div className="users">
+      {users.map((user) => (
           <User
             key={user.uid}
             user={user}
@@ -131,6 +132,7 @@ const Home = () => {
           />
         ))}
       </div>
+        </div>
       <div className={active ? `messages_container active` : `messages_container`}>
         {chat ? (
           <>
