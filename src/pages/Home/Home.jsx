@@ -34,7 +34,6 @@ const Home = () => {
 
   const user1 = auth.currentUser.uid;
 
-  console.log(active);
   useEffect(() => {
     const usersRef = collection(db, "users");
     // create query object
@@ -114,10 +113,11 @@ const Home = () => {
   return (
     <>
       <div className="home_container">
-        <div className={activeUser ? 'users_container active' : 'users_container'}>
+        <div className="user_container">
         <div className="title">
         <h4 className="chats">Chats</h4>
       </div>
+        <div className={activeUser ? 'users_container active' : 'users_container'}>
       <div className="users">
       {users.map((user) => (
           <User
@@ -131,6 +131,7 @@ const Home = () => {
           />
         ))}
       </div>
+        </div>
         </div>
       <div className={active ? `messages_container active` : `messages_container`}>
         {chat ? (

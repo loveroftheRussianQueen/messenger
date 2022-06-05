@@ -6,14 +6,8 @@
     overflow-y: auto;
     height: 100vh;
 
-    .users_container {
-      @include flex(unset, unset);
-      flex-direction: column;
-      position: relative;
+    .user_container{
       flex: 1;
-      background-color: #fff;
-      -webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
-      box-shadow: 0 2px 4px rgba(15,34,58,.12);
 
       .title{
         position: relative;
@@ -22,53 +16,60 @@
         
         h4{
           color: $white;
+          font-family: $font-family;
+          font-weight: 300;
+          text-align: center;
+          font-size: 1.2em;
           font-weight: 500;
+          padding: 20px;
         }
       }
-      
 
-      .users{
+      .users_container {
         position: relative;
-        flex: 1;
-        max-height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
-      }
+        flex: 1;
+        height: calc(100vh - 65px);
+        background-color: #fff;
+        -webkit-box-shadow: 0 2px 4px rgba(15,34,58,.12);
+        box-shadow: 0 2px 4px rgba(15,34,58,.12);
 
-      &::-webkit-scrollbar{
-        width: 0.3em;
-      }
-
-      &::-webkit-scrollbar-track{
-        background-color: rgb(64, 139, 123);
-      }
-
-      &::-webkit-scrollbar-thumb{
-        background-color: rgb(114, 204, 174);
-      }
-
-      @include media(tablet, mobile){
-        display: none;
-      }
-
-      &.active{
-        display: block;
-      }
-
-      h4, h5  {
-        font-family: $font-family;
-        font-weight: 300;
-        text-align: center;
-        font-size: 1.2em;
-        color: #495057;
-        padding: 20px;
-      }
-
-      h5{
-        font-size: 1.3em;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        padding-left: 10px;
+        &::-webkit-scrollbar{
+          width: 0.3em;
+        }
+  
+        &::-webkit-scrollbar-track{
+          background-color: rgb(64, 139, 123);
+        }
+  
+        &::-webkit-scrollbar-thumb{
+          background-color: rgb(114, 204, 174);
+        }
+  
+        @include media(tablet, mobile){
+          display: none;
+        }
+  
+        &.active{
+          display: block;
+        }
+  
+        h4, h5  {
+          font-family: $font-family;
+          font-weight: 300;
+          text-align: center;
+          font-size: 1.2em;
+          color: #495057;
+          padding: 20px;
+        }
+  
+        h5{
+          font-size: 1.3em;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          padding-left: 10px;
+        }
       }
     }
 
